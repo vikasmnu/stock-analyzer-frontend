@@ -8,8 +8,8 @@ function App() {
 
   const analyze = async () => {
     try {
-      const response = await axios.post('https://stock-analyzer-backend-rfie.onrender.com', {
-        symbol: symbol.toUpperCase().endsWith(".NS") ? symbol.toUpperCase() : symbol.toUpperCase() + ".NS"
+         const response = await axios.post('https://stock-analyzer-backend-rfie.onrender.com/analyze', {
+         symbol: symbol.toUpperCase().endsWith(".NS") ? symbol.toUpperCase() : symbol.toUpperCase() + ".NS"
       });
       setResult(response.data);
     } catch (error) {
